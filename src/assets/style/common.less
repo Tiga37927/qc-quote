@@ -1,0 +1,311 @@
+@charset "utf-8";
+@import "../icon/iconfont.css";
+/*
+* 通用类
+*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+}
+html,
+body {
+  font-family: "Microsoft YaHei";
+  font-size: 12px;
+  color: #333333;
+  background-color: #fff;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  color: #dd1827;
+}
+a:focus {
+  outline: none;
+}
+em,
+i {
+  font-style: normal;
+}
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+/**
+ * 通用类
+ */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"]{
+  -moz-appearance: textfield;
+}
+img {
+  display: block;
+  vertical-align: bottom;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+input,button{
+  border: none;
+}
+.font14{
+  font-size: 14px;
+}
+.font16{
+  font-size: 16px;
+}
+.font18{
+  font-size: 18px;
+}
+.font20{
+  font-size: 20px;
+}
+.font40{
+  font-size: 40px;
+}
+.color_393a{
+  color: #393a3a;
+}
+h1, h2, h3, h4, h5, h6{
+  font-weight: normal;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  zoom: 1;
+  height: 0;
+}
+.mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  opacity: .2;
+  filter: alpha(opacity=20);
+  z-index: 99;
+}
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  z-index: 999;
+}
+.t-red {
+  color: #ee3434;
+}
+.t-blue {
+  color: #00a0e9;
+}
+.b-yellow {
+  background: #FC7546 none repeat scroll 0 0;
+  color: white!important;
+}
+.page1200 {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.show{
+  display: block;
+}
+.hide {
+  display: none;
+}
+.btn {
+  display: inline-block;
+}
+.btn-big {
+  padding: 10px 50px;
+  font-size: 36px;
+  border-radius: 24px;
+}
+.btn-mid {
+  padding: 8px 16px;
+  font-size: 20px;
+  border-radius: 6px;
+}
+.btn-yellow {
+  color: #ffffff;
+  background-color: #df650f;
+  transition: background-color .3s ease;
+  &:hover {
+    color: #ffffff;
+    background-color: #df460f;
+  }
+}
+.btn-red {
+  color: #ffffff;
+  background-color: #ee3434;
+  transition: background-color .3s ease;
+  &:hover {
+    color: #ffffff!important;
+    background-color: #b41521;
+    transition: background-color .3s ease;
+  }
+}
+.btn-sub {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: 0px;
+  background: red;
+  color: white;
+  cursor: pointer;
+}
+.btn-refused {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: 0px;
+  background: #666666;
+  color: white;
+  cursor: none;
+}
+
+/**
+ * 月结信息展示
+ */
+.bg-verify {
+  padding: 90px 64px;
+  width: 934px;
+  height: 681px;
+  background-color: #fef4ea;
+  .v-msg {
+    font-size: 20px;
+  }
+  .reason {
+    margin-top: 20px;
+    padding: 22px 0;
+    width: 400px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    word-break: break-all;
+    color: #333333;
+  }
+  .link-group {
+    padding-top: 32px;
+    a {
+      margin-right: 46px;
+      font-size: 20px;
+      color: #ee3434;
+      text-decoration: underline;
+    }
+  }
+}
+
+.overfl-oneline {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.bg_fff {
+  background: #fff;
+}
+
+/* -------- checkbox复选框 ------- */
+.moc-checkbox {
+  input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #0275d8;
+    vertical-align: middle;
+    position: relative;
+
+    &:after {
+      display: none;
+      width: 6px;
+      height: 12px;
+      content: "";
+      border-bottom: 2px solid #0275d8;
+      border-right: 2px solid #0275d8;
+      transform: rotate(45deg);
+      position: absolute;
+      left: 5px;
+    }
+  }
+
+  input:checked + i {
+    &:after{
+      display: block;
+    }
+  }
+}
+
+/* ------- 公共tab样式 ------- */
+.lous_bill_tab {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th {
+        height: 34px;
+        background-color: #fbfbfc;
+        color: #838a96;
+        font-weight: 400;
+      }
+
+      td, th {
+        width: 25%;
+        text-align: center;
+      }
+
+      td {
+        height: 50px;
+        border-bottom: 1px solid #eee;
+        color: #a5a5a5;
+      }
+
+      tr:last-child td {
+        border-bottom: none;
+      } 
+
+      .td1 {
+
+        div {
+          width: 246px;
+          padding: 0 15px;
+        }
+      }
+
+    }
+  }
